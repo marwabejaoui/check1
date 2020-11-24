@@ -1,0 +1,22 @@
+ALGORITHM Sentance
+VAR
+    c : CHAR
+    long, nbrWords, nbrVow : INTEGER :=0;
+BEGIN
+    REPEAT
+        read(c)
+        long += 1;
+        SWITCH (c) DO
+            case ' ' : nbrWords; BREAK;
+            case 'a' : nbrVow += 1; BREAK;
+            case 'e' : nbrVow += 1; BREAK;
+            case 'i' : nbrVow += 1; BREAK;
+            case 'o' : nbrVow += 1; BREAK;
+            case 'u' : nbrVow += 1; BREAK;
+            case 'y' : nbrVow += 1; BREAK;
+        END_SWITCH
+    UNTIL (c = '.')
+    write(long)
+    write(nbrWords)
+    write(nbrVow)
+END
